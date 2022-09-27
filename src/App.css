@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "San Francisco Regular";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+@font-face {
+  font-family: "San Francisco Bold";
+  font-weight: 700;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'San Francisco Regular', serif;
+}
+
+.modal {
+  background-color: white;
+  position: absolute;
+  z-index: 100;
+  box-shadow: 0 5px 10px rgba(0, 0, 0);
+  padding: 20px;
+  border-radius: 20px;
+}
