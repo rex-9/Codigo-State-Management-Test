@@ -1,4 +1,3 @@
-import { parseSync } from '@babel/core';
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { createJoin } from '../redux/join';
