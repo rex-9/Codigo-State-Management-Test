@@ -22,7 +22,7 @@ const initialState = [{
   teamId: 2,
 }];
 
-// Team reducer
+// Team reducer for assigning the player into the team.
 export default (state = initialState, action) => {
   switch (action.type) {
     case ASSIGN:
