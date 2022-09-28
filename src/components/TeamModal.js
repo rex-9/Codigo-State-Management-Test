@@ -5,10 +5,12 @@ import { createTeam } from '../redux/team';
 const TeamModal = ({ setToggle }) => {
   const dispatch = useDispatch();
 
+// States for the Fields of the Team
   const [name, setName] = useState();
   const [region, setRegion] = useState();
   const [country, setCountry] = useState();
 
+// Update states on change with inputs
   const onName = (e) => {
     setName(e.target.value);
   };
