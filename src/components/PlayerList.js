@@ -5,10 +5,12 @@ import PlayerModal from './PlayerModal';
 const PlayerList = () => {
   const [playerId, setPlayerId] = useState();
   const players = useSelector((state) => state.players);
+
+// toggle for modal
   const [toggle, setToggle] = useState(false);
   const openModal = (id) => {
     setToggle(true);
-    setPlayerId(id);
+    setPlayerId(id); // Pass down player id to modal
   };
 
   return (
