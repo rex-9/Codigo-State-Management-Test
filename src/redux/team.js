@@ -47,20 +47,24 @@ export default (state = initialState, action) => {
 };
 
 // Action creators
+// get teams to update the data - not implemented and not neccessary
 export const fetchTeam = () => ({
   type: FETCH_TEAM,
 });
 
+// create a team
 export const createTeam = (team) => ({
   type: CREATE_TEAM,
   payload: team,
 });
 
+// update a team - not implemented
 export const editTeam = (id) => ({
   type: EDIT_TEAM,
   payload: id,
 });
 
+// delete a team
 export const deleteTeam = (id) => ({
   type: DELETE_TEAM,
   payload: id,
