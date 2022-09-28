@@ -6,12 +6,14 @@ import { fetchTeam } from '../redux/team';
 const PlayerModal = ({ setToggle, playerId }) => {
   const [teamId, setTeamId] = useState();
   const dispatch = useDispatch();
-  const teams = useSelector((state) => state.teams);
+  const teams = useSelector((state) => state.teams); // Teams from Redux Store
 
+// Close Player Modal
   const closeModal = () => {
     setToggle(false);
   };
 
+// Assign a player to a Team by creating a new Join State - similar to Join table in One to Many relationships
   const assign = (playerId, teamId) => {
     if (teamId) {
       console.log('true');
@@ -27,6 +29,7 @@ const PlayerModal = ({ setToggle, playerId }) => {
     dispatch(fetchTeam());
   };
 
+// update the state of teamId when selecting in a dropdown
   const onTeamId = (value) => {
     setTeamId(value);
   };
