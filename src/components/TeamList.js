@@ -4,20 +4,22 @@ import TeamModal from './TeamModal';
 import { deleteTeam } from '../redux/team';
 
 const TeamList = () => {
-  const teams = useSelector((state) => state.teams);
-  const joins = useSelector((state) => state.joins);
+  const teams = useSelector((state) => state.teams); // Teams from Redux Store
+  const joins = useSelector((state) => state.joins); // Joins from Redux Store
 
   const dispatch = useDispatch();
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(false); // Toggle for Team modal
 
   const openModal = () => {
     setToggle(true);
   };
 
+// Delete a Team
   const removeTeam = (id) => {
     dispatch(deleteTeam(id));
   };
 
+// Count players in a Specific Team
   const count = (id) => {
     const countedJoins = joins.filter((join) => join.teamId === id);
     let count = 0;
