@@ -26,7 +26,7 @@ const PlayerModal = ({ setToggle, playerId }) => {
       teamId,
     };
     dispatch(createJoin(newJoin));
-    dispatch(fetchTeam());
+    //dispatch(fetchTeam());
   };
 
 // update the state of teamId when selecting in a dropdown
