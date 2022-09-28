@@ -65,6 +65,7 @@ export default (state = initialState, action) => {
 };
 
 // action creators
+// fetch players from api - not implemented
 export const fetchPlayers = createAsyncThunk(FETCH_PLAYERS, async () => {
   const response = await fetch(api.playerEndPoint);
   const data = await response.json();
@@ -79,11 +80,13 @@ export const fetchPlayers = createAsyncThunk(FETCH_PLAYERS, async () => {
   return players;
 });
 
+// add a player to a team
 export const joinplayer = (id) => ({
   type: JOIN_TEAM,
   payload: id,
 });
 
+// remove a player from a team
 export const leaveplayer = (id) => ({
   type: LEAVE_TEAM,
   payload: id,
